@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+:root{
+    --green:#27ae60;
+    --drak-color: #219150;
+    --black: #444;
+    --light-color:#666;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --border-hover: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+body{
+    background: url(https://media.istockphoto.com/id/1250244754/photo/texture-of-ecological-paper-background-for-design-copy-space.jpg?s=612x612&w=0&k=20&c=mtrARQrn3nBVYR83hgwmuh4iv4iEbQMv20cOjrYEYXI=);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--black);
+}
+section{
+    padding:5rem 9%;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: var(--green);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.btn:hover{
+    background: var(--drak-color);
+}
+.header .header-1{
+    background: #fff;
+    padding: 1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .header-1 .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--drak-color);
+}
+.header .header-1 .logo img{
+    width: 3.5em;
+    position: absolute;
+    left: 2em;
+    top: -0.5em;
+    display: flex;
+}
+.header .header-1 .search-form{
+    width: 50rem;
+    height: 4rem;
+    border: 2px solid green;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 5rem;
+}
+.header .header-1 .search-form input{
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+}
+.header .header-1 .search-form label{
+    font-size: 1.8rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.header .header-1 .search-form label:hover{
+    color: var(--green);
+}
+.header .header-1 .icons div,
+.header .header-1 .icons a{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+
+}
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover{
+    color: var(--green);
+}
+
+#search-btn{
+    display: none;
+}
+
+.header .header-2{
+    background: var(--green);
+}
+.header .header-2 .navbar{
+    text-align: center;
+}
+.header .header-2 .navbar a{
+    color: #fff;
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.7rem;
+}
+.header .header-2 .navbar a:hover{
+    background: var(--drak-color);
+}
+.header .header-2.active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+/* body{
+    height: 300rem;
+
+} */
+.bottom-navbar{
+    text-align: center;
+    background: var(--green);
+    position: fixed;
+    bottom:0; left: 0; right: 0;
+    z-index: 1000;
+    display: none;
+    
+}
+.bottom-navbar a{
+    font-size: 2.5rem;
+    padding: 2rem;
+    color: #fff;
+}
+.bottom-navbar a:hover{
+    background: var(--drak-color);
+}
+.login-form-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.7);
+    position: fixed;
+    top:0; left: 0;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+.login-form-container.active{
+    top: 0; right: -105%;
+}
+.login-form-container form{
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 40rem;
+        padding: 4rem;
+        background: #fff;
+        border-radius: 3rem;
+        box-shadow: 0 0 5px #219150,
+        0 0 10px #219150,
+        0 0 15px #219150,
+        0 0 20px #219150;
+        transition: .5s;
+        margin: 0.5rem;
+      }
+.login-form-container form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #219150;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 320px;
+    margin: 30px 0;
+  }
+  .input-box input{
+   width: 100%;
+   height: 45px;
+   background: transparent;
+   border: 2px solid #27ae60;
+   outline: none;
+   border-radius: 5px;
+   font-size: 1.5em;
+   color: var(--black);
+   padding: 0 30px 0 35px; 
+   transition: .5s;
+ } 
+ .input-box:hover input{
+    box-shadow: 0 0 5px #05eb65, inset  0 0 5px #05eb65;
+ }
+.input-box .icon{
+    position: absolute;
+    left: 3%;
+    color: var(--black);
+    font-size: 1.5em;
+    line-height: 45px;
+    transition: .5s;
+  }
+  .input-box #eye{
+   position: absolute;
+   right: 3%;
+   color: var(--black);
+   font-size: 1.5em;
+   line-height: 45px;
+   cursor: pointer;
+ }
+ .checkbox{
+    cursor: pointer;
+ }
+  .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+   transform: translateY(-50%);
+   color: var(--black);
+   font-weight: 500;
+   pointer-events: none;
+   background-color: #fff;
+   transition: all .5s ease-in-out;
+   cursor: none;
+   font-size: 1.5rem;
+   padding: 0 8px;
+   border-radius: .5em;
+  }
+  .input-box input:focus~label,
+  .input-box input:valid~label{
+   top: 0px;
+   left: 15px;
+   color: #219150;
+   font-size: 1.5rem;
+  }
+ .remember-forgot{
+    font-size: 14.5px;
+    color: var(--black);
+    font-weight: 500;
+    margin: -15px 0 17px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .remember-forgot a{
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 500;
+  }
+  .remember-forgot a:hover{
+      text-decoration: underline;
+  }
+  button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: var(--green);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.8em;
+    color: aliceblue;
+    font-weight: 600;
+    transition: .5s;
+  }
+  button:hover{
+    background: var(--drak-color);
+    box-shadow: 0 0 10px #219150, inset 0 0 10px #219150;
+  }
+  .register-link{
+    font-size: 1.5em;
+    text-align: center;
+    margin: 25px 0;
+  }
+  .register-link p{
+    color: var(--black);
+    text-transform: none;
+  }
+  .register-link p a{
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 550;
+    transition: .5s;
+  }
+  .register-link p a:hover{
+    text-decoration: underline;
+  }
+  .media-options{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+  }
+  .media-options a{
+    width: 100%;
+    height: 40px;
+    background: var(--green);
+    border: 2px solid none;
+    border-radius: 5px;
+    color: aliceblue;
+    padding: 9px;
+    text-decoration: none;
+    text-align: center;
+    transition: .5s;
+    font-weight: 600;
+  }
+  .media-options a .icon1{
+    transition: .5s;
+  }
+  .google:hover .icon1{
+    color: black;
+  }
+  .facebook:hover .icon2{
+    color: black;
+  }
+  .b:hover{
+    font-weight: 600;
+    background: var(--drak-color);
+    box-shadow: 0 0 10px #219150, inset 0 0 10px #219150;
+  }
+  .c:hover{
+    font-weight: 600;
+    background: var(--drak-color);
+    box-shadow: 0 0 10px #219150, inset 0 0 10px #219150;
+  }
+  .google:hover{
+    text-decoration: underline;
+    color: black;
+  }
+  .facebook:hover{
+    text-decoration: underline;
+    color: black;
+  }
+  #close-login-btn{
+    position: absolute;
+    top: 1.5rem; right: 2.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    cursor: pointer;
+  }
+  #close-login-btnn{
+    position: absolute;
+    top: 1.5rem; right: 2.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    cursor: pointer;
+  }
+
+.home{
+    background: url(https://media.istockphoto.com/id/1250244754/photo/texture-of-ecological-paper-background-for-design-copy-space.jpg?s=612x612&w=0&k=20&c=mtrARQrn3nBVYR83hgwmuh4iv4iEbQMv20cOjrYEYXI=) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.home .row .content{
+    flex:1 1 42rem;
+
+}
+.home .row .books-slider{
+    flex: 1 1 42rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.home .row .books-slider a img{
+    height: 25rem;
+}
+.home .row .books-slider a:hover img{
+    transform: scale(.9);
+}
+.home .row .books-slider a:focus~img,
+.home .row .books-slider a:valid~img{
+  top: 20rem;
+ }
+.home .row .books-slider .stand{
+    width: 100%;
+    margin-top: -2rem;
+}
+.home .row .content h3{
+    
+    color: var(--drak-color);
+    font-size: 4.5rem;
+}
+.home .row .content .pg{
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    .header .header-1 .logo img{
+        display: none;
+    }
+    .header .header-1{
+        padding: 2rem;
+    }
+    section{
+        padding:3rem 2rem;
+    }
+}
+@media(max-width:768px){
+    html{
+        scroll-padding-top: 0;
+    }
+    body{
+        padding-bottom: 6rem;
+    }
+    .header .header-1 .logo img{
+        display: none;
+    }
+    .header .header-2{
+        display: none;
+    }
+    .bottom-navbar{
+        display: block;
+    }
+    .header .header-1 .logo img{
+        width: 2em;
+        position: absolute;
+        left: 1em;
+        top: 1em;
+        display: flex;
+    }
+    #search-btn{
+        display: inline-block;
+    }
+    .header .header-1{
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+    .header .header-1 .search-form{
+        position: absolute;
+        top: -115%; right: 2rem;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+        
+    }
+    .header .header-1 .search-form.active{
+        top: 115%;
+    }
+    .home .row .content{
+        text-align: center;
+    }
+    .home .row .content h3{
+        font-size: 3.5 rem;
+}
+@media(max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+    .header .header-1 .logo img{
+        display: none;
+    }
+
+}
+}
